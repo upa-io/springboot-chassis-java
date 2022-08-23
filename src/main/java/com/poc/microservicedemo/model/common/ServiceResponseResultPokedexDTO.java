@@ -12,7 +12,7 @@ public class ServiceResponseResultPokedexDTO implements Serializable{
 
   private static final long serialVersionUID = -6117722423974506433L;
   
-  String name;
-  String url;
+  private String name;
+  private String url;
 
 }

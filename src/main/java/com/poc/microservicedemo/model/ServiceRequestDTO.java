@@ -9,8 +9,8 @@ import lombok.Data;
 public class ServiceRequestDTO implements Serializable {
 
   private static final long serialVersionUID = -5073446212184200310L;
-  
-  String greeting;
-  
+
+  private String greeting;
+
 
 }

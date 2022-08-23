@@ -20,14 +20,14 @@ import lombok.extern.slf4j.Slf4j;
 @RestController
 @RequestMapping("/v1")
 @Slf4j
-@Tag(name ="ExampleController", description = "Controlador para el manejo de ejemplos")
+@Tag(name = "ExampleController", description = "Controlador para el manejo de ejemplos")
 public class ExampleController {
-  
+
   @Autowired
   PokedexCommand pokedexCommand;
 
   @GetMapping("/")
-  @Operation(summary="getAllPokedex", description="Obtener los pokedex")
+  @Operation(summary = "getAllPokedex", description = "Obtener los pokedex")
   public ServiceResponsePokedexDTO getAll() {
 
     log.info("Ejecutando metodo getAll");

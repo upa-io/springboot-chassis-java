@@ -8,15 +8,15 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.poc.microservicedemo.controller.ExampleController;
 
 @SpringBootTest
-public class ExampleControllerTest {
-  
+class ExampleControllerTest {
+
   @Autowired
   private ExampleController exampleController;
-  
+
   @DisplayName("ExampleController has not null injection")
   @Test
-  public void contextLoads() throws Exception {
-      assertThat(exampleController).isNotNull();
+  void contextLoads() throws Exception {
+    assertThat(exampleController).isNotNull();
   }
 
 }

@@ -11,12 +11,12 @@ import lombok.Data;
 @JsonInclude
 @Schema(name = "ServiceResponsePokedexDTO")
 public class ServiceResponsePokedexDTO implements Serializable {
-  
+
   private static final long serialVersionUID = -7682845143177306759L;
-  
-  String count;
-  String next;
-  String previous;
-  List<ServiceResponseResultPokedexDTO> results;
+
+  private String count;
+  private String next;
+  private String previous;
+  private List<ServiceResponseResultPokedexDTO> results;
 
 }

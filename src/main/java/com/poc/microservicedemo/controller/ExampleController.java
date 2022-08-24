@@ -35,7 +35,7 @@ public class ExampleController {
     return pokedexCommand.getAll();
   }
 
-  @PostMapping("greeting")
+  @PostMapping("/greeting")
   public ResponseEntity<String> postGreeting(@RequestBody ServiceRequestDTO request) {
 
     log.info("Ejecutando metodo postGreeting");

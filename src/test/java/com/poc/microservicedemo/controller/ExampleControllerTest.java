@@ -1,5 +1,7 @@
 package com.poc.microservicedemo.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.poc.microservicedemo.model.ServiceRequestDTO;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +26,27 @@ class ExampleControllerTest {
 
     mockMvc.perform(MockMvcRequestBuilders.get("/v1/")).andExpect(status().isOk())
         .andExpect(content().contentType(MediaType.APPLICATION_JSON));
-
   }
 
+  @DisplayName("Test call POST")
+  @Test
+  void postHttpRequest() throws Exception {
+
+    ServiceRequestDTO request = new ServiceRequestDTO ();
+    request.setGreeting("Hello!");
+
+    mockMvc.perform(MockMvcRequestBuilders.post("/v1/greeting").content(asJsonString(request))
+            .contentType(MediaType.APPLICATION_JSON)
+            .accept(MediaType.APPLICATION_JSON));
+  }
+
+  public static String asJsonString(final Object obj) {
+    try {
+      final ObjectMapper mapper = new ObjectMapper();
+      final String jsonContent = mapper.writeValueAsString(obj);
+      return jsonContent;
+    } catch (Exception e) {
+      throw new RuntimeException(e);
+    }
+  }
 }

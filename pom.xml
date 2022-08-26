@@ -17,9 +17,15 @@
 	<description>Demo microservice template in Spring Boot Starter Parent 2.7.1</description>
 
 	<properties>
+		<!-- Internal configuration -->
 		<java.version>17</java.version>
+
+		<!-- Third party dependencies -->
 		<spring-cloud.version>2021.0.3</spring-cloud.version>
-		<project.springdoc-openapi-ui.version>1.6.9</project.springdoc-openapi-ui.version>
+		<project.springdoc-openapi-ui.version>1.6.10</project.springdoc-openapi-ui.version>
+		<project.spring-boot-admin-starter-client.version>2.7.4</project.spring-boot-admin-starter-client.version>
+
+		<!-- SonarCloud configuration -->
 		<sonar.organization>upa-io</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
@@ -81,7 +87,7 @@
 		<dependency>
 			<groupId>de.codecentric</groupId>
 			<artifactId>spring-boot-admin-starter-client</artifactId>
-			<version>2.7.1</version>
+			<version>${project.spring-boot-admin-starter-client.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springdoc</groupId>

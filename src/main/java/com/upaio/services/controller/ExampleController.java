@@ -1,4 +1,4 @@
-package com.poc.microservicedemo.controller;
+package com.upaio.services.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.poc.microservicedemo.command.PokedexCommand;
-import com.poc.microservicedemo.model.ServiceRequestDTO;
-import com.poc.microservicedemo.model.ServiceResponsePokedexDTO;
+import com.upaio.services.command.PokedexCommand;
+import com.upaio.services.model.ServiceRequestDTO;
+import com.upaio.services.model.ServiceResponsePokedexDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;

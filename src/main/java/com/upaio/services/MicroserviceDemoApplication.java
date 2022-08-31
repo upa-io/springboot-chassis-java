@@ -1,4 +1,4 @@
-package com.poc.microservicedemo;
+package com.upaio.services;
 
 
 import org.springframework.boot.SpringApplication;

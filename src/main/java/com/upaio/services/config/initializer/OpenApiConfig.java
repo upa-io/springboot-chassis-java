@@ -1,4 +1,4 @@
-package com.poc.microservicedemo.config.initializer;
+package com.upaio.services.config.initializer;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

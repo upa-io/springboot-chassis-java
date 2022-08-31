@@ -1,4 +1,4 @@
-package com.poc.microservicedemo.model.common;
+package com.upaio.services.model.common;
 
 import java.io.Serializable;
 import com.fasterxml.jackson.annotation.JsonInclude;

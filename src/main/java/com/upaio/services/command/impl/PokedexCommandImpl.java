@@ -1,11 +1,11 @@
-package com.poc.microservicedemo.command.impl;
+package com.upaio.services.command.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import com.poc.microservicedemo.command.PokedexCommand;
-import com.poc.microservicedemo.model.ServiceResponsePokedexDTO;
+import com.upaio.services.command.PokedexCommand;
+import com.upaio.services.model.ServiceResponsePokedexDTO;
 import lombok.extern.slf4j.Slf4j;
 
 @Service("PokedexCommand")

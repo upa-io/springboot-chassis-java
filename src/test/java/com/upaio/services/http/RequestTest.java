@@ -1,4 +1,4 @@
-package com.poc.microservicedemo.http;
+package com.upaio.services.http;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.DisplayName;

@@ -1,9 +1,9 @@
-package com.poc.microservicedemo.model;
+package com.upaio.services.model;
 
 import java.io.Serializable;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.poc.microservicedemo.model.common.ServiceResponseResultPokedexDTO;
+import com.upaio.services.model.common.ServiceResponseResultPokedexDTO;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 

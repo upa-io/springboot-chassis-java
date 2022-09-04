@@ -20,9 +20,16 @@ class RequestTest {
 
   @DisplayName("GetAll for PokedexCommand")
   @Test
-  void greetingShouldReturnDefaultMessage() throws Exception {
+  void getAllPokedexShouldReturnDefaultMessage() throws Exception {
     assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/ms-rest-api/v1/",
         String.class)).contains("count");
+  }
+
+  @DisplayName("GetBucketList for MinIO")
+  @Test
+  void getBucketlistShouldReturnDefaultMessage() throws Exception {
+    assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/ms-rest-api/minio/buckets/",
+            String.class)).contains("responseCode");
   }
 
 }

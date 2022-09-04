@@ -24,6 +24,7 @@
 		<project.springdoc-openapi-ui.version>1.6.10</project.springdoc-openapi-ui.version>
 		<project.spring-boot-admin-starter-client.version>2.7.4</project.spring-boot-admin-starter-client.version>
 		<project.jacoco-maven-plugin.version>0.8.8</project.jacoco-maven-plugin.version>
+		<project.io.minio.version>8.4.3</project.io.minio.version>
 
 		<!-- SonarCloud configuration -->
 		<sonar.organization>upa-io</sonar.organization>
@@ -94,6 +95,12 @@
 			<artifactId>springdoc-openapi-ui</artifactId>
 			<version>${project.springdoc-openapi-ui.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>io.minio</groupId>
+			<artifactId>minio</artifactId>
+			<version>${project.io.minio.version}</version>
+		</dependency>
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>

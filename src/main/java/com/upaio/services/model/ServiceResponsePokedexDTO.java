@@ -1,5 +1,6 @@
 package com.upaio.services.model;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -12,6 +13,7 @@ import lombok.Data;
 @Schema(name = "ServiceResponsePokedexDTO")
 public class ServiceResponsePokedexDTO implements Serializable {
 
+  @Serial
   private static final long serialVersionUID = -7682845143177306759L;
 
   private String count;

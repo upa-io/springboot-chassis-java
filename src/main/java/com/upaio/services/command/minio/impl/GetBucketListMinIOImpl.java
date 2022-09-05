@@ -36,9 +36,8 @@ public class GetBucketListMinIOImpl implements GetBucketListMinIOCommand {
 
     MinioClient minioClient = generateMiniOConfig();
 
-      bucketCommonDTO = new BucketCommonDTO();
-
       for (Bucket bucket : minioClient.listBuckets()) {
+        bucketCommonDTO = new BucketCommonDTO();
 
         bucketCommonDTO.setName(bucket.name());
         bucketCommonDTO.setCreationDate(bucket.creationDate());

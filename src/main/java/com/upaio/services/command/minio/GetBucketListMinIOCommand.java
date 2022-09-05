@@ -1,9 +1,9 @@
-package com.upaio.services.command;
+package com.upaio.services.command.minio;
 
 import java.io.IOException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
-import com.upaio.services.model.ServiceResponseGetBucketListMinIODTO;
+import com.upaio.services.model.minio.ServiceResponseGetBucketListMinIODTO;
 import io.minio.errors.ErrorResponseException;
 import io.minio.errors.InsufficientDataException;
 import io.minio.errors.InternalException;

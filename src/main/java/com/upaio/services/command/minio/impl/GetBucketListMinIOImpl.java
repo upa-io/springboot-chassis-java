@@ -1,4 +1,4 @@
-package com.upaio.services.command.impl;
+package com.upaio.services.command.minio.impl;
 
 import java.io.IOException;
 import java.security.InvalidKeyException;
@@ -6,9 +6,9 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.stereotype.Service;
-import com.upaio.services.command.GetBucketListMinIOCommand;
-import com.upaio.services.model.ServiceResponseGetBucketListMinIODTO;
+import com.upaio.services.command.minio.GetBucketListMinIOCommand;
 import com.upaio.services.model.common.BucketCommonDTO;
+import com.upaio.services.model.minio.ServiceResponseGetBucketListMinIODTO;
 import io.minio.MinioClient;
 import io.minio.errors.ErrorResponseException;
 import io.minio.errors.InsufficientDataException;

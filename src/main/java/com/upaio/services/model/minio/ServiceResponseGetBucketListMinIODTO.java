@@ -1,4 +1,4 @@
-package com.upaio.services.model;
+package com.upaio.services.model.minio;
 
 
 import java.io.Serial;

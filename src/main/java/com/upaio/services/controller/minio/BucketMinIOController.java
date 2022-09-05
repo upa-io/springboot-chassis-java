@@ -1,7 +1,7 @@
-package com.upaio.services.controller;
+package com.upaio.services.controller.minio;
 
-import com.upaio.services.command.GetBucketListMinIOCommand;
-import com.upaio.services.model.ServiceResponseGetBucketListMinIODTO;
+import com.upaio.services.command.minio.GetBucketListMinIOCommand;
+import com.upaio.services.model.minio.ServiceResponseGetBucketListMinIODTO;
 import io.minio.errors.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;

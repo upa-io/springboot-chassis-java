@@ -1,7 +1,6 @@
 package com.upaio.services.smoke;
 
-import com.upaio.services.controller.BucketMinIOController;
-import com.upaio.services.controller.ExampleController;
+import com.upaio.services.controller.minio.BucketMinIOController;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

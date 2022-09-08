@@ -20,7 +20,7 @@
 		<java.version>17</java.version>
 
 		<!-- Third party dependencies -->
-		<spring-cloud.version>2021.0.3</spring-cloud.version>
+		<project.spring-cloud-starter.version>2021.0.3</project.spring-cloud-starter.version>
 		<project.springdoc-openapi-ui.version>1.6.10</project.springdoc-openapi-ui.version>
 		<project.spring-boot-admin-starter-client.version>2.7.4</project.spring-boot-admin-starter-client.version>
 		<project.jacoco-maven-plugin.version>0.8.8</project.jacoco-maven-plugin.version>
@@ -107,7 +107,7 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>${spring-cloud.version}</version>
+				<version>${project.spring-cloud-starter.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>

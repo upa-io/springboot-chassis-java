@@ -1,9 +1,10 @@
 package com.upaio.services.command;
 
 import com.upaio.services.model.ServiceResponsePokedexDTO;
+import org.springframework.http.ResponseEntity;
 
 public interface PokedexCommand {
-  
-  ServiceResponsePokedexDTO getAll();
+
+  ResponseEntity<ServiceResponsePokedexDTO> getAll();
 
 }

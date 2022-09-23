@@ -1,6 +1,5 @@
 package com.upaio.services.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -23,12 +22,15 @@ import lombok.extern.slf4j.Slf4j;
 @Tag(name = "ExampleController", description = "Controlador para el manejo de ejemplos")
 public class ExampleController {
 
-  @Autowired
-  PokedexCommand pokedexCommand;
+  final PokedexCommand pokedexCommand;
+
+  public ExampleController(PokedexCommand pokedexCommand) {
+    this.pokedexCommand = pokedexCommand;
+  }
 
   @GetMapping("/")
   @Operation(summary = "getAllPokedex", description = "Obtener los pokedex")
-  public ServiceResponsePokedexDTO getAll() {
+  public ResponseEntity<ServiceResponsePokedexDTO> getAll() {
 
     log.info("Ejecutando metodo getAll");
 

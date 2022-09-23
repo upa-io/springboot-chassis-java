@@ -21,7 +21,7 @@ Configuration:
 
   Loggers:
     logger:
-      - name: com.test
+      - name: com.upaio.services
         level: info
         additivity: false
         AppenderRef:

@@ -17,6 +17,5 @@ public class ServiceResponseGetBucketListMinIODTO implements Serializable {
   @Serial
   private static final long serialVersionUID = -4250850719003867627L;
 
-  private String responseCode;
   private List<BucketCommonDTO> bucketList;
 }

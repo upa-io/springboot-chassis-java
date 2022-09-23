@@ -7,6 +7,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,9 +28,10 @@ public class BucketMinIOController {
 
   @GetMapping("/buckets")
   @Operation(summary = "getAllBuckets", description = "Obtener todos los buckets")
-  public ServiceResponseGetBucketListMinIODTO getBucketList() throws ServerException,
-      InsufficientDataException, ErrorResponseException, IOException, NoSuchAlgorithmException,
-      InvalidKeyException, InvalidResponseException, XmlParserException, InternalException {
+  public ResponseEntity<ServiceResponseGetBucketListMinIODTO> getBucketList()
+      throws ServerException, InsufficientDataException, ErrorResponseException, IOException,
+      NoSuchAlgorithmException, InvalidKeyException, InvalidResponseException, XmlParserException,
+      InternalException {
 
     log.info("Ejecutando metodo getBucketList");
 

@@ -5,6 +5,9 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import com.upaio.services.command.minio.GetBucketListMinIOCommand;
 import com.upaio.services.model.common.BucketCommonDTO;
@@ -24,17 +27,21 @@ import lombok.extern.slf4j.Slf4j;
 public class GetBucketListMinIOImpl implements GetBucketListMinIOCommand {
 
   @Override
-  public ServiceResponseGetBucketListMinIODTO getBucketList() throws ServerException,
-      InsufficientDataException, ErrorResponseException, IOException, NoSuchAlgorithmException,
-      InvalidKeyException, InvalidResponseException, XmlParserException, InternalException {
+  public ResponseEntity<ServiceResponseGetBucketListMinIODTO> getBucketList()
+      throws ServerException, InsufficientDataException, ErrorResponseException, IOException,
+      NoSuchAlgorithmException, InvalidKeyException, InvalidResponseException, XmlParserException,
+      InternalException {
 
     log.info("Ejecutando comando: GetBucketListMinIOCommand y su metodo: getBucketList");
-
-    ServiceResponseGetBucketListMinIODTO response = new ServiceResponseGetBucketListMinIODTO();
+    
+    ResponseEntity<ServiceResponseGetBucketListMinIODTO> responseEntity = null;
+    ServiceResponseGetBucketListMinIODTO responseInternal =
+        new ServiceResponseGetBucketListMinIODTO();
     BucketCommonDTO bucketCommonDTO = null;
     List<BucketCommonDTO> bucketList = new ArrayList<>();
 
-    MinioClient minioClient = generateMiniOConfig();
+    try {
+      MinioClient minioClient = generateMiniOConfig();
 
       for (Bucket bucket : minioClient.listBuckets()) {
         bucketCommonDTO = new BucketCommonDTO();
@@ -45,9 +52,14 @@ public class GetBucketListMinIOImpl implements GetBucketListMinIOCommand {
         bucketList.add(bucketCommonDTO);
       }
 
-    response.setBucketList(bucketList);
-    response.setResponseCode("200");
-    return response;
+      responseInternal.setBucketList(bucketList);
+      responseEntity = ResponseEntity.status(HttpStatus.OK).body(responseInternal);
+
+    } catch (Exception exception) {
+      log.error("Error: " + exception);
+
+    }
+    return responseEntity;
   }
 
   private MinioClient generateMiniOConfig() {

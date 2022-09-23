@@ -10,10 +10,11 @@ import io.minio.errors.InternalException;
 import io.minio.errors.InvalidResponseException;
 import io.minio.errors.ServerException;
 import io.minio.errors.XmlParserException;
+import org.springframework.http.ResponseEntity;
 
 public interface GetBucketListMinIOCommand {
 
-  ServiceResponseGetBucketListMinIODTO getBucketList() throws ServerException,
+  ResponseEntity<ServiceResponseGetBucketListMinIODTO> getBucketList() throws ServerException,
       InsufficientDataException, ErrorResponseException, IOException, NoSuchAlgorithmException,
       InvalidKeyException, InvalidResponseException, XmlParserException, InternalException;
 }

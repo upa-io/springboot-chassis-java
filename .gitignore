@@ -87,3 +87,4 @@ buildNumber.properties
 *.iml
 *.ipr
 /.apt_generated_tests/
+**/.DS_Store

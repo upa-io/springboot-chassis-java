@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.1</version>
+		<version>2.7.5</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
@@ -14,7 +14,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<name>microservice-demo</name>
-	<description>Demo microservice template in Spring Boot Starter Parent 2.7.1</description>
+	<description>Demo microservice template in Spring Boot Starter Parent 2.7.5</description>
 	<properties>
 		<!-- Internal configuration -->
 		<java.version>17</java.version>

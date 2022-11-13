@@ -2,16 +2,11 @@ spring:
   boot:
     admin:
       client:
-        url: http://localhost:8082/rest-api-admin-server
+        url: ${ADMIN-URL}
   application:
     name: ms-rest-api
-    version: v1
-  #security:
-    #user:
-      #name: monitor
-      #password: monitor123
 server:
-  port: 7001
+  port: 8002
   servlet:
     context-path: /ms-rest-api
 management:

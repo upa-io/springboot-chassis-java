@@ -32,5 +32,12 @@ pipeline {
                 }
             }
         }
+        stage ('SonarCloud Quality Gates') {
+            steps {
+                script {
+                    waitForQualityGate abortPipeline: false, credentialsId: '7992b875-d441-482d-9de4-2237ae5d2ad9'
+                }
+            }
+        }
     }
 }

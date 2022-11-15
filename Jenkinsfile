@@ -23,5 +23,14 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
+        stage ('SonarCloud Analysis') {
+            steps {
+                script {
+                    withSonarQubeEnv(credentialsId: '7992b875-d441-482d-9de4-2237ae5d2ad9') {
+                        sh 'mvn clean package sonar:sonar'
+                    }
+                }
+            }
+        }
     }
 }

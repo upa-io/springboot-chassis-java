@@ -17,6 +17,9 @@ management:
  endpoint:
    health:
      show-details: always
+ metrics:
+   tags:
+     application: ${spring.application.name}
 logging:
   file:
     name: ms-rest-api.log

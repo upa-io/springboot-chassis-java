@@ -94,6 +94,10 @@
 			<artifactId>minio</artifactId>
 			<version>${project.io.minio.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
 
 	</dependencies>
 	<dependencyManagement>

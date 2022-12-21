@@ -17,7 +17,7 @@
 	<description>Demo microservice template in Spring Boot Starter Parent 2.7.5</description>
 	<properties>
 		<!-- Internal configuration -->
-		<java.version>17</java.version>
+		<java.version>18</java.version>
 
 		<!-- Third party dependencies -->
 		<project.spring-cloud-starter.version>2021.0.3</project.spring-cloud-starter.version>

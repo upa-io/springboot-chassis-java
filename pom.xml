@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.7</version>
+		<version>2.7.10</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
@@ -22,7 +22,7 @@
 		<!-- Third party dependencies -->
 		<project.spring-cloud-starter.version>2021.0.3</project.spring-cloud-starter.version>
 		<project.springdoc-openapi-ui.version>1.6.10</project.springdoc-openapi-ui.version>
-		<project.spring-boot-admin-starter-client.version>2.7.4</project.spring-boot-admin-starter-client.version>
+		<project.spring-boot-admin-starter-client.version>2.7.10</project.spring-boot-admin-starter-client.version>
 		<project.jacoco-maven-plugin.version>0.8.8</project.jacoco-maven-plugin.version>
 		<project.io.minio.version>8.4.3</project.io.minio.version>
 

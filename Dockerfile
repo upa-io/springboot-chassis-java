@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:experimental
-FROM eclipse-temurin:19.0.1_10-jdk as build
+FROM eclipse-temurin:20.0.1_9-jdk as build
 WORKDIR /workspace/app
 
 COPY mvnw .
@@ -10,7 +10,7 @@ COPY src src
 RUN --mount=type=cache,target=/root/.m2 ./mvnw install -DskipTests
 RUN mkdir -p target/extracted &&  java -Djarmode=layertools -jar target/*.jar extract --destination target/extracted
 
-FROM eclipse-temurin:19.0.1_10-jdk
+FROM eclipse-temurin:20.0.1_9-jdk
 VOLUME /tmp
 ARG EXTRACTED=/workspace/app/target/extracted
 COPY --from=build ${EXTRACTED}/dependencies/ ./

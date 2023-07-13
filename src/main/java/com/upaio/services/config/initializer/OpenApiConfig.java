@@ -32,7 +32,7 @@ public class OpenApiConfig {
   @Bean
   public OpenApiCustomiser customerGlobalHeaderOpenApiCustomiser() {
 
-    log.info("Cargando SwaggerConfig - customerGlobalHeaderOpenApiCustomiser");
+    log.info("Cargando OpenApiConfig");
 
     return openApi -> openApi
         .info(new Info().title(apiTitle).description(apiDescription).version(apiVersion)).getPaths()

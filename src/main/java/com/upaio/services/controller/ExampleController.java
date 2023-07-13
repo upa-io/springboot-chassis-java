@@ -29,7 +29,6 @@ public class ExampleController {
 
   final PokedexCommand pokedexCommand;
 
-
   public ExampleController(PokedexCommand pokedexCommand, MeterRegistry registry) {
     this.pokedexCommand = pokedexCommand;
     visitCounter = Counter.builder("visit_counter")

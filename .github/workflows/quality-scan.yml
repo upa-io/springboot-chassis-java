@@ -7,7 +7,7 @@ on:
     paths:
         - 'src/main/java/**/*.java'
         - 'src/test/java/**/*.java'
-        - '**/*.properties'
+        - 'src/main/resources/**/*.yml'
         - 'pom.xml'
 jobs:
   quality-scan:

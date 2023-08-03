@@ -16,7 +16,7 @@ class ExampleControllerTest {
 
   @DisplayName("ExampleController has not null injection")
   @Test
-  void contextLoads() throws Exception {
+  void contextLoads() {
     assertThat(exampleController).isNotNull();
   }
 

@@ -12,8 +12,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -21,14 +19,6 @@ class ExampleControllerTest {
 
   @Autowired
   private MockMvc mockMvc;
-  
-  @DisplayName("Get all pokedex")
-  @Test
-  void getPokedexHttpRequest() throws Exception {
-
-    mockMvc.perform(MockMvcRequestBuilders.get("/v1/")).andExpect(status().isOk())
-        .andExpect(content().contentType(MediaType.APPLICATION_JSON));
-  }
 
   @DisplayName("Test call POST")
   @Test

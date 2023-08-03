@@ -32,6 +32,30 @@ class ExampleControllerTest {
             .accept(MediaType.APPLICATION_JSON)));
   }
 
+  @DisplayName("Test call PUT")
+  @Test
+  void putHttpRequest() throws Exception {
+
+    ServiceRequestDTO request = new ServiceRequestDTO ();
+    request.setGreeting("Hello!");
+
+    assertNotNull(mockMvc.perform(MockMvcRequestBuilders.put("/v1/greeting").content(asJsonString(request))
+            .contentType(MediaType.APPLICATION_JSON)
+            .accept(MediaType.APPLICATION_JSON)));
+  }
+
+  @DisplayName("Test call DELETE")
+  @Test
+  void deleteHttpRequest() throws Exception {
+
+    ServiceRequestDTO request = new ServiceRequestDTO ();
+    request.setGreeting("Hello!");
+
+    assertNotNull(mockMvc.perform(MockMvcRequestBuilders.delete("/v1/greeting").content(asJsonString(request))
+            .contentType(MediaType.APPLICATION_JSON)
+            .accept(MediaType.APPLICATION_JSON)));
+  }
+
   public static String asJsonString(final Object obj) {
     try {
       final ObjectMapper mapper = new ObjectMapper();

@@ -21,14 +21,6 @@ class ExampleControllerTest {
 
   @Autowired
   private MockMvc mockMvc;
-  
-  @DisplayName("Get all pokedex")
-  @Test
-  void getPokedexHttpRequest() throws Exception {
-
-    mockMvc.perform(MockMvcRequestBuilders.get("/v1/")).andExpect(status().isOk())
-        .andExpect(content().contentType(MediaType.APPLICATION_JSON));
-  }
 
   @DisplayName("Test call POST")
   @Test

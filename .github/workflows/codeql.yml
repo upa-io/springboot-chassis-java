@@ -16,6 +16,11 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+    paths:
+      - 'src/main/java/**/*.java'
+      - 'src/test/java/**/*.java'
+      - 'src/main/resources/**/*.yml'
+      - 'pom.xml'
   schedule:
     - cron: '43 4 * * 1'
 

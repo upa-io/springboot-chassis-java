@@ -14,6 +14,11 @@ name: "CodeQL"
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - 'src/main/java/**/*.java'
+      - 'src/test/java/**/*.java'
+      - 'src/main/resources/**/*.yml'
+      - 'pom.xml'
   pull_request:
     branches: [ "main" ]
     paths:

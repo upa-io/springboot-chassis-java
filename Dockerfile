@@ -1,5 +1,4 @@
-# syntax=docker/dockerfile:experimental
-FROM eclipse-temurin:20.0.1_9-jdk as build
+FROM eclipse-temurin:20.0.1_9-jdk AS build
 WORKDIR /workspace/app
 
 COPY mvnw .

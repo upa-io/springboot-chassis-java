@@ -6,8 +6,19 @@ updates:
     schedule:
       # Check for updates to GitHub Actions every day
       interval: "daily"
+    assignees:
+      - "aguirre-jes"
   - package-ecosystem: "maven"
     directory: "/"
     schedule:
       # Check for updates to Maven dependencies every day
       interval: "daily"
+    assignees:
+      - "aguirre-jes"
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      # Check for updates to Docker image versions every day
+      interval: "daily"
+    assignees:
+      - "aguirre-jes"

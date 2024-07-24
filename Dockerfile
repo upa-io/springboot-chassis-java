@@ -1,4 +1,4 @@
-FROM eclipse-temurin:22.0.1_8-jdk AS build
+FROM eclipse-temurin:22.0.2_9-jdk AS build
 WORKDIR /workspace/app
 
 COPY mvnw .
@@ -9,7 +9,7 @@ COPY src src
 RUN --mount=type=cache,target=/root/.m2 ./mvnw install -DskipTests
 RUN mkdir -p target/extracted &&  java -Djarmode=layertools -jar target/*.jar extract --destination target/extracted
 
-FROM eclipse-temurin:22.0.1_8-jdk
+FROM eclipse-temurin:22.0.2_9-jdk
 VOLUME /tmp
 ARG EXTRACTED=/workspace/app/target/extracted
 COPY --from=build ${EXTRACTED}/dependencies/ ./

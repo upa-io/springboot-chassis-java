@@ -16,7 +16,7 @@ jobs:
       run:
         shell: bash
     steps:
-      - uses: actions/checkout@v4.1.7
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
       - name: Set up JDK 21 Temurin

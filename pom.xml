@@ -22,7 +22,7 @@
 		<!-- Third party dependencies -->
 		<project.spring-cloud-starter.version>2025.0.0</project.spring-cloud-starter.version>
 		<project.springdoc-openapi-ui.version>1.8.0</project.springdoc-openapi-ui.version>
-		<project.spring-boot-admin-starter-client.version>3.5.1</project.spring-boot-admin-starter-client.version>
+		<project.spring-boot-admin-starter-client.version>3.5.2</project.spring-boot-admin-starter-client.version>
 		<project.jacoco-maven-plugin.version>0.8.13</project.jacoco-maven-plugin.version>
 		<owasp.dependency-check-maven.version>8.3.1</owasp.dependency-check-maven.version>
 
